@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tienda en Línea | TechSolutions</title>
+    <link rel="stylesheet" href="Barra.css">
+    <link rel="stylesheet" href="Catalogo_Tienda.css">
+    <link rel="icon" href="Imagenes/log.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav id="barra-principal">
+            <div class="logo"><img src="Imagenes/logotipo_barra.png" width="400px" onclick="location.href='Pagina_principal.html'"></div>
+            <div class="barra-nav">
+                <div class="barra-busqueda">
+                    <input id="busqueda" name="busqueda" type="text" placeholder="Buscar en toda la tienda">
+                    <button type="submit"><img src="Imagenes/buscar.png" width="20px"></button>
+                </div>
+            </div>
+            <div class="inicio-s">
+                <img src="Imagenes/Iniciar Sesión.png" width="50px" onclick="location.href='Inicio_sesion.php'">
+            </div>
+        </nav>
+        <div class="menu">
+            <ul>
+                <li><a href="Servicios.php">Servicios</a></li>
+                <li><a href="Catalogo_Tienda.php">Tienda en Línea</a></li>
+                <li><a href="Blog.php">Blog de Novedades</a></li>
+                <li class="dropdown">
+                    <a href="Galeria.php">Galería de Proyectos</a>
+                    <ul class="submenu">
+                        <li><a href="Galeria_desarrollo.html">Desarrollo Web</a></li>
+                        <li><a href="Galeria_aplicaciones.html">Aplicaciones Móviles</a></li>
+                        <li><a href="Galeria_ciberseguridad.html">CiberSeguridad</a></li>
+                        <li><a href="Galeria_soporte.html">Soporte Técnico y Mantenimiento</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Noticias.html">Noticias del Sector</a>
+                    <ul class="submenu">
+                        <li><a href="Noticias_eventos.html">Eventos Tecnológicos</a></li>
+                        <li><a href="Noticias_sector.html">Noticias del Sector Tecnológico</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="cuerpo">
+        <div class="titulo">
+            <div><h2><img src="Imagenes/catalogo.png" width="40px">            Nuestros Servicios y Productos | Catálogo</h2></div>
+            <div class="acciones">
+            <a href="#" id="abrir_favoritos"> <img src="Imagenes/favoritos.png" width="35px"></a>
+            <div id="carrito"><a href="#" id="abrir_carrito"> <img src="Imagenes/carrito.png" width="35px">        Mi Carrito</a></div>
+            </div>
+        </div>
+        <div class="buscar">
+            <div><a href="#" id="abrir_categorias"> <img src="Imagenes/categorias.png" width="15px">     Categorias</a></div>
+            <div class="barra_busqueda">
+                <input id="busqueda" name="busqueda" type="<text>" placeholder="Buscar articulo">
+                <button type="submit"><img src="Imagenes/buscar_art.png" width="20px"></button>
+            </div>
+        </div>
+
+        <h2>Licencias de Sofware</h2>
+        <div class="productos">
+            <div class="producto">
+                <div class="titulo_producto">
+                    <center><label>Microsoft Office 365 Personal</label></center>
+                </div>
+                <div class="imagen">
+                    <center><img src="Imagenes/img_Catalogo/microsoft_office.jpg" width="200"></center>
+                </div>
+                <div class="descripcion_producto">
+                    <center><p>Suite de oficina con herramientas básicas y avanzadas.</p></center>
+                </div>
+                <p class="precio"> $1,499 MXN/ año</p>
+                <a href="#" class="abrir-detalle" data-target="producto_1">Ver detalles</a>
+                <button type="submit"><img src="Imagenes/carrito.png" width="20px">    Agregar a Carrito</button>
+            </div>
+            <div class="producto">
+                <div class="titulo_producto">
+                    <center><label>Windows 11 Pro</label></center>
+                </div>
+                <div class="imagen">
+                    <center><img src="Imagenes/img_Catalogo/windows_11.avif" width="200"></center>
+                </div>
+                <div class="descripcion_producto">
+                    <center><p>Sistema operativo empresarial.</p></center>
+                </div>
+                <p class="precio"> $3,200 MXN</p>
+                <a href="#" id="abrir_p2">     Ver detalles</a>
+                <button type="submit"><img src="Imagenes/carrito.png" width="20px">    Agregar a Carrito</button>
+            </div>
+            <div class="producto">
+                <div class="titulo_producto">
+                <center><label>Adobe Photoshop CC (Licencia Anual)</label></center>
+                </div>
+                <div class="imagen">
+                    <center><img src="Imagenes/img_Catalogo/adobe_photoshop.avif" width="200"></center>
+                </div>
+                <div class="descripcion_producto">
+                    <center><p>Edición de imágenes profesional.</p></center>
+                </div>
+                <p class="precio"> $4,200 MXN/ año</p>
+                <a href="#" id="abrir_p3">     Ver detalles</a>
+                <button type="submit"><img src="Imagenes/carrito.png" width="20px">    Agregar a Carrito</button>
+            </div>
+            <div class="producto">
+                <div class="titulo_producto">
+                <center><label>AutoCAD 2024</label></center>
+                </div>
+                <div class="imagen">
+                    <center><img src="Imagenes/img_Catalogo/autoCAD.jpg" width="200"></center>
+                </div>
+                <div class="descripcion_producto">
+                    <center><p>Software CAD 2D y 3D.</p></center>
+                </div>
+                <p class="precio"> $45,000 MXN/ año</p>
+                <a href="#" id="abrir_p4">     Ver detalles</a>
+                <button type="submit" onclick=""><img src="Imagenes/carrito.png" width="20px">    Agregar a Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="categorias">
+        <div class="categorias_catalogo">
+            <span class="cerrar">&times;</span>
+            <h4><img src="Imagenes/categorias.png" width="15px">     Categorias</h4>
+            <hr class="separador">
+            <h4>Accesorios Tecnológicos</h4>
+            <hr class="separador">
+            <h4>Equipos y Hardware</h4>
+            <hr class="separador">
+            <h4>Licencias de Software</h4>
+            <hr class="separador">
+            <h4>Redes y Conectividad</h4>
+            <hr class="separador">
+            <h4>Soporte y Servicios Digitales</h4>
+            <hr class="separador">
+        </div>
+    </div>
+
+    <div id="producto_1" class="ver_mas">
+        <div class="detalles">
+            <span class="cerrar">&times;</span>
+            <center><h3>Microsoft Office 365 Personal</h3></center>
+            <center><img id="imagen" src="Imagenes/img_Catalogo/autoCAD.jpg" width="250"></center>
+            <center><p>Incluye Word, Excel, PowerPoint, Outlook y 1TB en OneDrive. Ideal para estudiantes 
+                y profesionales que requieren trabajar desde cualquier dispositivo con respaldo en la nube.</p></center>
+            <label>Cantidad:<input id="cantidad" name="cantidad" type="<text>"></label>
+            <div class="acciones">
+                <button id="boton" type="submit"><img src="Imagenes/favoritos.png" width="20px">    Agregar a Favoritos</button>
+                <button id="boton" type="submit"><img src="Imagenes/carrito.png" width="20px">    Agregar a Carrito</button>
+                <button id="boton" type="submit"><img src="Imagenes/bolsa.png" width="20px">    Comprar Ahora</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><a href="#">Contacto</a></p>
+        <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="Catalogo_Tienda.js"></script>
+</body>
+</html>

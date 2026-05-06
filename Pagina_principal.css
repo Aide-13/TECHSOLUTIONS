@@ -1,0 +1,237 @@
+
+
+.img1 {
+  display: flex;          /* Alinea los elementos en fila */
+  align-items: center;    /* Centra verticalmente */
+  gap: 15px;              /* Espacio entre imagen y texto */
+}
+
+.contenido{
+    margin-top: 10%;
+}
+
+.carrusel{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.imagenes{
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+}
+.img{
+    
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85) ;
+    height: 450px;
+    width: 600px;
+    border-radius: 15px;
+    margin: 5px;
+    object-fit: cover;
+    filter: saturate(150%);
+
+}
+
+/* Selecciona la imagen de la flecha "atrás" */
+.atras .img {
+    height: 50px; /* Tamaño de la flecha */
+    width: 50px;
+    border-radius: 5px; 
+    opacity: 0.1;/* Las flechas no necesitan el borde tan grande */
+}
+
+/* Selecciona la imagen de la flecha "adelante" */
+.adelante .img {
+    height: 50px; /* Tamaño de la flecha */
+    width: 50px;
+    border-radius: 5px;
+    opacity: 0.1;
+}
+.quienes_somos h2{
+    margin-top: 6%;
+    text-align: right;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-right: 80px;
+}
+.con_1{
+    display: flex;
+    flex-direction: row;
+}
+.con_1 img{
+    margin-left: 60px;
+}
+.texto p{
+    font-family: "Raleway", sans-serif;
+    margin-right: 80px;
+    line-height: 1.5;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.mision h3 {
+
+    margin-top: 15px;
+    text-align: left;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left: 0px;
+
+}
+
+.con_2{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.con_2 p{
+
+margin-top: 30px;
+
+
+
+}
+
+.mision{
+
+    margin-top: 15px;
+    text-align: left;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left: 80px;
+    font-size: 15px;
+}
+
+.con_2 img{
+
+    margin-right: 60px;
+}
+
+
+.vision{
+
+    margin-top: px;
+    text-align: left;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-right: 536px;
+    margin-left: 80px;
+    font-size: 15px;
+
+}
+
+.obj_especificos{
+
+    margin-left: 80px;
+    margin-right: 536px;
+
+}
+
+
+.obj_especificos ul li{
+
+    font-family: "Raleway", sans-serif;
+    margin-right: 80px;
+    line-height: 1.5;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/* SLIDER */
+    .slider-container { 
+    display: flex;
+    position: relative;
+    width: 90%; 
+    max-width: 90%; 
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px 0; 
+   
+    align-items: center;
+    margin-left: 70px;
+    margin-top: 5%;
+}
+
+.slider-content {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+}
+
+.wave-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 10; 
+    opacity: 0.7;
+}
+
+.slider-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #333;
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #C20001;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #eeeeee;
+}
