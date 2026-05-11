@@ -16,3 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(footer);
 });
+
+const toggleBtn = document.getElementById("menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});

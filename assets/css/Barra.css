@@ -1,4 +1,4 @@
-body { /*codigo de la barra principal en todas las paginas*/
+body { 
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,8 +23,9 @@ nav {
     transition: top 0.5s ease;
 }
 
-.logo{
+.logo img{
     cursor: pointer;
+    max-width: 400px;
 }
 
 .inicio-s {
@@ -48,6 +49,14 @@ nav {
 .barra-nav button {
     border-radius: 30px;
     background-color: grey;
+}
+
+.barra-busqueda img{
+    max-width: 20px;
+}
+
+.barra-inicio img{
+    max-width: 50px;
 }
 
 #busqueda {
@@ -158,6 +167,24 @@ nav {
     color: #f0f0f0;
 }
 
+.menu-toggle{
+    display: none;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background: #C20001;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 900;
+}
+
+.menu.active{
+    margin: 0;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -170,6 +197,7 @@ footer {
       padding: 10px;
       font-family: Arial, sans-serif;
       position: relative;
+      margin: 0;
     }
 
     footer a {
@@ -181,3 +209,106 @@ footer {
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px){
+    #barra-principal{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .barra-nav{
+        display: none !important;
+    }
+
+    .barra-inicio{
+        display: none !important;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        padding: 15px;
+    }
+
+    .logo img{
+        width: 220px;
+    }
+
+    .barra-nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .barra-busqueda{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #busqueda{
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .barra-nav button{
+        padding: 8px;
+    }
+
+    .inicio-s{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inicio-s img{
+        width: 45px;
+        margin: 0;
+    }
+
+    .menu-toggle{
+        display: block;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .menu{
+        display: none;
+        position: relative;
+        top: 0;
+        width: 100%;
+        border-bottom: none;
+    }
+
+    .menu.active{
+        display: block;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        text-align: center;
+    }
+
+    .menu li{
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu li ul.submenu{
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .menu li:hover ul.submenu{
+        display: block;
+    }
+}
