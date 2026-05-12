@@ -1,4 +1,9 @@
 # TechSolutions
+
+# <<<<<<< HEAD
+
+> > > > > > > v-1/vainilla
+
 ### Plataforma web corporativa con tienda simulada, blog y galería de proyectos
 
 TechSolutions es una plataforma web profesional, moderna y responsiva desarrollada como caso de estudio para la materia de MVC. Representa el sitio corporativo de una empresa de servicios tecnológicos, incluyendo presentación de servicios, blog de novedades, galería de proyectos filtrable, formulario de contacto y una tienda online simulada con carrito de compras interactivo.
@@ -7,13 +12,23 @@ TechSolutions es una plataforma web profesional, moderna y responsiva desarrolla
 
 ## Funcionalidades principales
 
--  **Inicio** — Slider principal con promociones/novedades, aside lateral con testimonios y enlaces rápidos
--  **Servicios** — Presentación del perfil empresarial (misión, visión y objetivo) y catálogo de servicios
--  **Blog y Noticias** — Artículos y novedades del sector tecnológico almacenados en base de datos
--  **Galería de Proyectos** — Álbum filtrable por categorías (desarrollo web, ciberseguridad, consultoría, etc.)
--  **Tienda** — Catálogo de productos y licencias con carrito de compras simulado, filtros y resumen interactivo
--  **Contacto** — Formulario con validación de campos y mensajes de confirmación
--  Diseño responsivo adaptable a cualquier dispositivo
+<<<<<<< HEAD
+
+- **Inicio** — Slider principal con promociones/novedades, aside lateral con testimonios y enlaces rápidos
+- **Servicios** — Presentación del perfil empresarial (misión, visión y objetivo) y catálogo de servicios
+- **Blog y Noticias** — Artículos y novedades del sector tecnológico almacenados en base de datos
+- **Galería de Proyectos** — Álbum filtrable por categorías (desarrollo web, ciberseguridad, consultoría, etc.)
+- **Tienda** — Catálogo de productos y licencias con carrito de compras simulado, filtros y resumen interactivo
+- **Contacto** — Formulario con validación de campos y mensajes de confirmación
+- # Diseño responsivo adaptable a cualquier dispositivo
+- **Inicio** — Slider principal con promociones/novedades, aside lateral con testimonios y enlaces rápidos
+- **Servicios** — Presentación del perfil empresarial (misión, visión y objetivo) y catálogo de servicios
+- **Blog y Noticias** — Artículos y novedades del sector tecnológico almacenados en base de datos
+- **Galería de Proyectos** — Álbum filtrable por categorías (desarrollo web, ciberseguridad, consultoría, etc.)
+- **Tienda** — Catálogo de productos y licencias con carrito de compras simulado, filtros y resumen interactivo
+- **Contacto** — Formulario con validación de campos y mensajes de confirmación
+- Diseño responsivo adaptable a cualquier dispositivo
+  > > > > > > > v-1/vainilla
 
 > ⚠️ La tienda es una simulación. No procesa pagos reales ni transacciones económicas.
 
@@ -21,11 +36,20 @@ TechSolutions es una plataforma web profesional, moderna y responsiva desarrolla
 
 ## Tecnologías utilizadas
 
+<<<<<<< HEAD
 | Capa | Tecnología |
 |------|-----------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | PHP |
+| Base de datos | MySQL |
+=======
+| Capa | Tecnología |
+| ------------- | -------------------------------- |
 | Frontend | HTML, CSS, JavaScript, Bootstrap |
 | Backend | PHP |
 | Base de datos | MySQL |
+
+> > > > > > > v-1/vainilla
 
 ---
 
@@ -43,7 +67,6 @@ TechSolutions es una plataforma web profesional, moderna y responsiva desarrolla
 
 ```bash
 git clone https://github.com/Aide-13/TECHSOLUTIONS.git
-cd techsolutions
 ```
 
 ### 2. Configurar la base de datos
@@ -54,7 +77,7 @@ cd techsolutions
 
 ```php
 $host = 'localhost';
-$db   = 'techsolutions';
+$db   = 'techsolutions_tienda';
 $user = 'tu_usuario';
 $pass = 'tu_contraseña';
 ```
@@ -73,24 +96,33 @@ http://localhost:3000
 
 ---
 
-## Estructura del proyecto
+# <<<<<<< HEAD
 
-```
-...
+> > > > > > > v-1/vainilla
 
-```
 ---
 
 ## Base de datos
 
 La BD almacena la información dinámica del sitio:
 
+<<<<<<< HEAD
 | Tabla | Contenido |
 |-------|-----------|
 | `productos` | Nombre, descripción, precio, imagen y categoría de cada producto/licencia |
 | `blog` | Artículos del blog con título, contenido, imagen y fecha |
 | `noticias` | Novedades y eventos del sector tecnológico |
 | `servicios`| Servicios disponibles con características e imagen |
+=======
+| Tabla | Contenido |
+| ----------- | ------------------------------------------------------------------------- |
+| `productos` | Nombre, descripción, precio, imagen y categoría de cada producto/licencia |
+| `blog` | Artículos del blog con título, contenido, imagen y fecha |
+| `noticias` | Novedades y eventos del sector tecnológico |
+| `servicios` | Servicios disponibles con características e imagen |
+
+> > > > > > > v-1/vainilla
+
 ---
 
 ## Sobre la tienda
@@ -107,7 +139,18 @@ La tienda muestra productos y licencias de software con sus características y p
 
 ---
 
+## Desarrollo
+
+**Período:** Septiembre 2025 — Octubre 2025
+
+---
+
 ## Desarrolladores
+
+# <<<<<<< HEAD
+
+> > > > > > > v-1/vainilla
+
 - Aide garcia Martinez - FrontEnd, BackEnd, Bases de Datos
 - Azucena Ceja Rojas - Levantamiento de requerimientos, Diseño UI/UX, Frontend
 

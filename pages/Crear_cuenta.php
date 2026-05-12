@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Crear Cuenta | TechSolutions</title>
+    <link rel="stylesheet" href="../assets/css/Barra.css">
+    <link rel="stylesheet" href="../assets/css/Crear_cuenta.css">
+    <link rel="icon" href="../assets/img/log.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="logotipo">
+        <img id="img1" src="../assets/img/logotipo_2.png" width="600px">
+    </div>
+    <div class="contenido">
+        <h3> Crea una Cuenta</h3>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+        <input id="apellidos" name="apellidos" type="text" placeholder="Apellidos">
+
+        <label> Fecha de Nacimiento</label>
+        <div class="fecha_nacimiento">
+            <input id="dia" name="dia" type="text" placeholder="Día"> 
+            <select id="mes" name="mes">
+                <option value="mes">Mes</option>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="septiembre">Septiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
+            </select>
+            <select id="año" name="año">
+                <option value="Año">Año</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+            </select>
+        </div>
+        <div class="cuenta">
+            <input id="correo_electronico" name="correo_electronico" type="text" placeholder="Correo Electrónico">
+            <input id="suaurio" name="usuario" type="text" placeholder="Usuario">
+            <input id="contraseña" name="contraseña" type="password" placeholder="Contraseña">
+            <input id="confirm_contraseña" name="confirm_contraseña" type="password" placeholder="Confirmar Contraseña">
+            <button type="submit">Regístrate</button>
+            <a href="Inicio_sesion.php"> Ya tengo una cuenta </a>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="Contactos.php">Contacto</a></p>
+        <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
