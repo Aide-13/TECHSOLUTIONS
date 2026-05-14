@@ -18,6 +18,7 @@ TechSolutions es una plataforma web profesional, moderna y responsiva desarrolla
 - # Diseño responsivo adaptable a cualquier dispositivo
 
 > ⚠️ La tienda es una simulación. No procesa pagos reales ni transacciones económicas.
+> ⚠️ El inicio de sesion es solo para demostrar los apartados de la página.
 
 ---
 
