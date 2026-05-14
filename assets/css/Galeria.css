@@ -41,12 +41,11 @@ main{
   justify-content: center;
 }
 
-/* --- Tarjeta principal giratoria --- */
 .flip-card {
   background: transparent;
   width: 100%;
   max-width: 900px;
-  height: 600px;
+  max-height: 500px;
   margin: 0 auto;
   perspective: 1500px;
 }

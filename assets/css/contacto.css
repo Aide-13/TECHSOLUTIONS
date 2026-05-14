@@ -1,10 +1,15 @@
 /* --- SECCIÓN CONTACTO --- */
 .contacto {
   max-width: 1100px;
+  width: 90%;
   margin: auto;
   padding: 30px;
   font-family: Arial, sans-serif;
-  margin-top: 10%;
+  margin-top: 180px;
+}
+
+.contacto p{
+  text-align: justify;
 }
 
 .contacto h2 {
@@ -18,6 +23,7 @@
   font-size: 1.1rem;
 }
 
+/* --- TARJETAS DE CONTACTO --- */
 .contacto-opciones {
   display: flex;
   gap: 20px;
@@ -28,19 +34,20 @@
 .contacto-card {
   background: #333;
   color: white;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
   flex: 1;
-  min-width: 280px;
+  min-width: 250px;
 }
 
 .contacto-card input {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-top: 10px;
   border: none;
   background: #fff;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* --- FORMULARIO --- */
@@ -62,9 +69,16 @@
 .formulario input,
 .formulario select,
 .formulario textarea {
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .formulario button {
@@ -88,4 +102,69 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 40px;
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 768px) {
+  
+  .contacto {
+    width: 95%;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .contacto h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .contacto .subtitulo {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .contacto-opciones {
+    flex-direction: column;
+  }
+
+  .form-doble {
+    flex-direction: column;
+  }
+
+  .contacto-card{
+    max-width: 200px;
+  }
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+@media (max-width: 480px) {
+
+  .contacto {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .contacto h2 {
+    font-size: 1.5rem;
+  }
+
+  .contacto-card {
+    min-width: 95%;
+    padding: 15px;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 12px;
+  }
 }

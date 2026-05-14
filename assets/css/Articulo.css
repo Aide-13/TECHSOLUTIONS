@@ -7,12 +7,15 @@
     margin-bottom: 0;
 }
 
-aside{
-    background: #EEEEEE;
-    margin: 20px;
-    width: 300px;
-    height: 940px;
-    justify-content: center;
+aside{ 
+    background: #EEEEEE; 
+    margin: 20px; 
+    width: 300px; 
+    height: 940px; 
+    justify-content: center; 
+    position: sticky;
+    top: 200px;
+    align-self: flex-start;
 }
 
 .seccion{
@@ -248,4 +251,105 @@ main{
 
 .avatar{
     max-width: 30px;
+}
+
+@media (max-width: 992px){
+
+    .contenedor{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    aside{
+        width: 100%;
+        height: auto;
+        position: static; /* quitamos sticky en tablet */
+        margin: 0;
+    }
+
+    .seccion,
+    .seccion2,
+    .seccion3{
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
+
+    main{
+        width: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .comentarios{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #comentario,
+    #nombre{
+        width: 100%;
+    }
+
+    .acciones{
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px){
+
+    .contenedor{
+        margin: 15px;
+        margin-top: 90px;
+    }
+
+    aside{
+        display: none !important;
+    }
+
+    main{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .articulo{
+        text-align: left;
+    }
+
+    .comentarios{
+        margin: 0;
+        width: 100%;
+    }
+
+    .cartas{
+        padding: 15px;
+    }
+
+    .perfil{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cabeza1{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .acciones{
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .formulario button{
+        width: 100%;
+    }
+
+    #comentario,
+    #nombre{
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

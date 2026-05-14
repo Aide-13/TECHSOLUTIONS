@@ -27,44 +27,56 @@ $resultado = $conn->query($sql);
     </head>
     <body>
         <header>
-        <nav id="barra-principal">
-            <div class="logo"><img src="../assets/img/logotipo_barra.png" width="400px" onclick="location.href='index.php'"></div>
-            <div class="barra-nav">
-                <div class="barra-busqueda">
-                    <input id="busqueda" name="busqueda" type="text" placeholder="Buscar en toda la tienda">
-                    <button type="submit"><img src="../assets/img/busqueda.png" width="20px"></button>
+            <nav id="barra-principal">
+                <div class="logo"><img src="../assets/img/logotipo_barra.png" width="400px" onclick="location.href='index.php'"></div>
+                <div class="barra-nav">
+                    <div class="barra-busqueda">
+                        <input id="busqueda" name="busqueda" type="text" placeholder="Buscar en toda la tienda">
+                        <button type="submit"><img src="../assets/img/busqueda.png" width="20px"></button>
+                    </div>
                 </div>
+                <div class="inicio-s">
+                    <img src="../assets/img/icono.png" width="50px" onclick="location.href='Inicio_sesion.php'">
+                </div>
+                <button class="menu-toggle" id="menu-toggle">
+                    ☰
+                </button>
+            </nav>
+            <div class="menu">
+                <ul>
+                    <li class="mobile-login"><a href="Inicio_sesion.php">Iniciar sesión</a></li>
+                    <li class="dropdown">
+                        <a href="Servicios.php">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="Servicio_detalle.php?id=1">Desarrollo Web y Aplicaciones</a></li>
+                            <li><a href="Servicio_detalle.php?id=2">Consultoría Tecnológica</a></li>
+                            <li><a href="Servicio_detalle.php?id=3">Soporte Técnico y Mantenimiento</a></li>
+                            <li><a href="Servicio_detalle.php?id=4">Ciberseguridad</a></li>
+                            <li><a href="Servicio_detalle.php?id=5">Implementación en la Nube</a></li>
+                            <li><a href="Servicio_detalle.php?id=6">Soluciones Digitales</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Catalogo_Tienda.php">Tienda en Línea</a></li>
+                    <li><a href="Blog.php">Blog de Novedades</a></li>
+                    <li class="dropdown">
+                        <a href="Galeria.php">Galería de Proyectos</a>
+                        <ul class="submenu">
+                            <li><a href="Galeria_desarrollo.php">Desarrollo Web</a></li>
+                            <li><a href="Galeria_aplicaciones.php">Aplicaciones Móviles</a></li>
+                            <li><a href="Galeria_ciberseguridad.php">CiberSeguridad</a></li>
+                            <li><a href="Galeria_soporte.php">Soporte Técnico y Mantenimiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Noticias.php">Noticias del Sector</a>
+                        <ul class="submenu">
+                            <li><a href="Noticias_eventos.php">Eventos Tecnológicos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Contactos.php">Contacto</a></li>
+                </ul>
             </div>
-            <div class="inicio-s">
-                <img src="../assets/img/icono.png" width="50px" onclick="location.href='Inicio_sesion.php'">
-            </div>
-        </nav>
-        <div class="menu">
-            <ul>
-                <li><a href="Servicios.php">Servicios</a></li>
-                <li><a href="Catalogo_Tienda.php">Tienda en Línea</a></li>
-                <li><a href="Blog.php">Blog de Novedades</a></li>
-                <li class="dropdown">
-                    <a href="Galeria.php">Galería de Proyectos</a>
-                    <ul class="submenu">
-                        <li><a href="Galeria_desarrollo.php">Desarrollo Web</a></li>
-                        <li><a href="Galeria_aplicaciones.php">Aplicaciones Móviles</a></li>
-                        <li><a href="Galeria_ciberseguridad.php">CiberSeguridad</a></li>
-                        <li><a href="Galeria_soporte.php">Soporte Técnico y Mantenimiento</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="Noticias.php">Noticias del Sector</a>
-                    <ul class="submenu">
-                        <li><a href="Noticias_eventos.php">Eventos Tecnológicos</a></li>
-                    </ul>
-                </li>
-                <li><a href="Contactos.php">Contacto</a></li>
-            </ul>
-        </div>
-    </header>
-
-
+        </header>
         <section class="contenedor">
             <aside class="sidebar">
                 <section class="seccion">
@@ -76,7 +88,6 @@ $resultado = $conn->query($sql);
                         <p>Hola, somos <b>TechSolutions</b> tu aliado tecnológico para el crecimiento empresarial.</p>
                     </div>
                 </section>
-
                 <section class="seccion2">
                     <div class="titulo">
                         <img src="../assets/img/ligero (1).png" width="20px">
@@ -92,7 +103,6 @@ $resultado = $conn->query($sql);
                         <p><a href="Blog.php?categoria=startups"><img src="../assets/img/hashtag.png" width="10px">Startups</a></p>
                     </div>
                 </section>
-
                 <section class="seccion3">
                     <div class="titulo">
                         <h4>Lo que dicen nuestros clientes 🗨️</h4>
@@ -117,7 +127,6 @@ $resultado = $conn->query($sql);
                     </div>
                 </section>
             </aside>
-
             <div class="articulo">
                 <div class="tendencias">
                     <h3>Tendencias</h3>
@@ -184,6 +193,17 @@ $resultado = $conn->query($sql);
                 </main>
             </div>
         </section>
+        <footer>
+            <p>
+                <a href="Contactos.php">
+                    Contacto
+                </a>
+            </p>
+            <p>
+                &copy; 2025 TechSolutions
+            </p>
+        </footer>
     </body>
     <script src="../assets/js/Blog.js"></script>
+    <script src="../assets/js/Barra.js"></script>
 </html>

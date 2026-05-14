@@ -196,26 +196,26 @@ nav {
 }
 
 footer {
-      background-color: #CC0000;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-family: Arial, sans-serif;
-      position: relative;
-      margin: 0;
-    }
+    background-color: #CC0000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0;
+}
 
-    footer a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
 
-    @media (max-width: 768px){
+@media (max-width: 768px){
     #barra-principal{
         display: flex;
         flex-direction: row;

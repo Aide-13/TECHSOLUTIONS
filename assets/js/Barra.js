@@ -1,40 +1,51 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
-  const footer = document.querySelector("footer");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        nav.style.top = "-120px";
-      } else {
-        nav.style.top = "0"; 
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  observer.observe(footer);
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".menu");
   const footer = document.querySelector("footer");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        menu.style.top = "-100px";
-      } else {
-        menu.style.top = "0"; 
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
+  let observer;
 
-  observer.observe(footer);
+  function activarObserver() {
+    
+    // Si es tablet/móvil
+    if (window.matchMedia("(max-width: 992px)").matches) {
+      
+      // Mostrar siempre nav y menu
+      if (nav) nav.style.top = "0";
+      if (menu) menu.style.top = "0";
+
+      // Si ya había observer, lo desconectamos
+      if (observer) observer.disconnect();
+      return;
+    }
+
+    // Desktop
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (nav) nav.style.top = "-120px";
+          if (menu) menu.style.top = "-100px";
+        } else {
+          if (nav) nav.style.top = "0";
+          if (menu) menu.style.top = "0";
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    if (footer) {
+      observer.observe(footer);
+    }
+  }
+
+  activarObserver();
+
+  // Detecta cambios de tamaño en tiempo real
+  window.addEventListener("resize", () => {
+    if (observer) observer.disconnect();
+    activarObserver();
+  });
 });
 
 const toggleBtn = document.getElementById("menu-toggle");
