@@ -4,8 +4,26 @@ require_once("../conexion.php");
 $conexionBD = new Conexion();
 $conn = $conexionBD->conectar();
 
-$sql = "SELECT * FROM servicios";
-$resultado = $conn->query($sql);
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+
+    $sql = "SELECT s.*, se.*
+            FROM servicios s
+            INNER JOIN servicio_esp se 
+            ON s.id = se.id_servicio
+            WHERE s.id = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+    $servicio = $resultado->fetch_assoc();
+
+} else {
+    header("Location: Servicios.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,9 +31,9 @@ $resultado = $conn->query($sql);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Servicios | TechSolutions</title>
+        <title><?php echo $servicio['titulo']; ?> | TechSolutions</title>
         <link rel="stylesheet" href="../assets/css/Barra.css">
-        <link rel="stylesheet" href="../assets/css/Servicios.css">
+        <link rel="stylesheet" href="../assets/css/Servicio_detalle.css">
         <link rel="icon" href="../assets/img/log.png" type="image/x-icon">
     </head>
     <body>
@@ -71,22 +89,51 @@ $resultado = $conn->query($sql);
             </div>
         </header>
         <div class="contenido">
-            <?php while($fila = $resultado->fetch_assoc()) { ?>
-            <div class="Servicio">
-                <h3><?php echo $fila['titulo']; ?></h3>
-                <center>
-                    <img src="<?php echo $fila['imagen']; ?>" width="220px">
-                </center>
-                <p><?php echo $fila['descripcion']; ?></p>
-                <a href="Servicio_detalle.php?id=<?php echo $fila['id']; ?>">
-                    Más detalles
-                </a>
+            <h2><?php echo $servicio['titulo']; ?></h2>
+            <div class="descripcion_ser">
+                <div class="imagen">
+                    <img src="<?php echo $servicio['imagen']; ?>" width="300px">
+                </div>
+                <div>
+                    <h3><?php echo $servicio['frase']; ?></h3>
+                    <p><?php echo nl2br($servicio['descripcion']); ?></p>
+                </div>
             </div>
-            <?php } ?>
+            <div class="contenido_2">
+                <div class="contenido_3">
+                    <div class="puntos">
+                        <h4>Lo Que Hacemos Por Ti</h4>
+                        <p><?php echo $servicio['hechos']; ?></p>
+                    </div>
+                    <div class="puntos">
+                        <h4>Así Trabajamos en TechSolutions</h4>
+                        <p><?php echo $servicio['trabajo']; ?></p>
+                    </div>
+                </div>
+            </div>
+            <h4 id="subtitulo">Por Qué Elegirnos</h4>
+            <div class="contenido_4">
+                <div>
+                    <img src="../assets/img/beneficios.png" width="200px">
+                </div>
+                <div>
+                    <p><?php echo $servicio['elegir']; ?></p>
+                </div>
+            </div>
+            <a href="Contactos.php" id="contacto">
+                Contáctanos para solicitar más detalles o hacer una cotización
+                <img src="../assets/img/telefono.png" width="20px">
+            </a>
         </div>
         <footer>
-            <p><a href="Contactos.php">Contacto</a></p>
-            <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+            <p>
+                <a href="Contactos.php">
+                    Contacto
+                </a>
+            </p>
+            <p>
+                &copy; 2025 TechSolutions
+            </p>
         </footer>
     </body>
     <script src="../assets/js/barra.js"></script>

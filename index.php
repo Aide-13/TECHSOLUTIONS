@@ -28,7 +28,17 @@
             <div class="menu">
                 <ul>
                     <li class="mobile-login"><a href="pages/Inicio_sesion.php">Iniciar sesión</a></li>
-                    <li><a href="pages/Servicios.php">Servicios</a></li>
+                    <li class="dropdown">
+                        <a href="Servicios.php">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="pages/Servicio_detalle.php?id=1">Desarrollo Web y Aplicaciones</a></li>
+                            <li><a href="pages/Servicio_detalle.php?id=2">Consultoría Tecnológica</a></li>
+                            <li><a href="pages/Servicio_detalle.php?id=3">Soporte Técnico y Mantenimiento</a></li>
+                            <li><a href="pages/Servicio_detalle.php?id=4">Ciberseguridad</a></li>
+                            <li><a href="pages/Servicio_detalle.php?id=5">Implementación en la Nube</a></li>
+                            <li><a href="pages/Servicio_detalle.php?id=6">Soluciones Digitales</a></li>
+                        </ul>
+                    </li>
                     <li><a href="pages/Catalogo_Tienda.php">Tienda en Línea</a></li>
                     <li><a href="pages/Blog.php">Blog de Novedades</a></li>
                     <li class="dropdown">
@@ -44,7 +54,6 @@
                         <a href="pages/Noticias.php">Noticias del Sector</a>
                         <ul class="submenu">
                             <li><a href="pages/Noticias_eventos.php">Eventos Tecnológicos</a></li>
-                            <li><a href="pages/Noticias.php">Noticias del Sector Tecnológico</a></li>
                         </ul>
                     </li>
                     <li><a href="pages/Contactos.php">Contacto</a></li>

@@ -4,7 +4,7 @@ require_once("../conexion.php");
 $conexionBD = new Conexion();
 $conn = $conexionBD->conectar();
 
-$mensaje = ""; // Para mostrar mensajes
+$mensaje = ""; 
 
 if (isset($_POST['guardar'])) {
     $nombre_completo = $_POST['nombre_completo'] ?? '';
@@ -22,28 +22,28 @@ if (isset($_POST['guardar'])) {
     );
 
     if ($stmt_insert->execute()) {
-        $mensaje = "✅ Registro guardado con éxito.";
+        $mensaje = "Registro guardado con éxito.";
         $nombre_completo = $empresa = $correo_numero = $asunto = $comentarios_contacto = "";
     } else {
-        $mensaje = "❌ Error al guardar: " . $stmt_insert->error;
+        $mensaje = "Error al guardar: " . $stmt_insert->error;
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contactos - TECHSOLUTIONS</title>
-    <link rel="stylesheet" href="../assets/css/Barra.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../assets/css/contacto.css?v=<?php echo time(); ?>">
-    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon">
-</head>
-<body>
-<header>
-    <nav id="barra-principal">
-        <div class="logo"><img src="../assets/img/logotipo_barra.png" width="400px" onclick="location.href='index.php'"></div>
-        <div class="barra-nav">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Contactos - TECHSOLUTIONS</title>
+        <link rel="stylesheet" href="../assets/css/Barra.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="../assets/css/contacto.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="../assets/img/logo.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <nav id="barra-principal">
+                <div class="logo"><img src="../assets/img/logotipo_barra.png" width="400px" onclick="location.href='index.php'"></div>
+                <div class="barra-nav">
             <div class="barra-busqueda">
                 <input id="busqueda" name="busqueda" type="text" placeholder="Buscar en toda la tienda">
                 <button type="submit"><img src="../assets/img/busqueda.png" width="20px"></button>

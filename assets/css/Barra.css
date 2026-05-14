@@ -28,6 +28,10 @@ nav {
     max-width: 400px;
 }
 
+.mobile-login{
+    display: none !important;
+}
+
 .inicio-s {
     justify-content: center;
     align-items: center;
@@ -70,13 +74,14 @@ nav {
     display: flex;
     flex-direction: row;
     position: fixed;
-    margin-top: 6%;
     margin-left: 200px;
+    margin-top: 6%;
     gap: 5%;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.5);
     z-index: 800;
+    transition: top 0.5s ease;
 }
 
 .menu ul {
@@ -216,6 +221,10 @@ footer {
         flex-direction: row;
     }
 
+    .mobile-login{
+        display: block !important;
+    }
+
     .barra-nav{
         display: none !important;
     }
@@ -260,16 +269,8 @@ footer {
     }
 
     .inicio-s{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none !important;
     }
-
-    .inicio-s img{
-        width: 45px;
-        margin: 0;
-    }
-
     .menu-toggle{
         display: block;
         position: relative;

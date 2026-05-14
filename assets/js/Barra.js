@@ -5,9 +5,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        nav.style.top = "-120px"; // Oculta el nav (ajusta si es necesario)
+        nav.style.top = "-120px";
       } else {
-        nav.style.top = "0"; // Vuelve a mostrarlo
+        nav.style.top = "0"; 
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  observer.observe(footer);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".menu");
+  const footer = document.querySelector("footer");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        menu.style.top = "-100px";
+      } else {
+        menu.style.top = "0"; 
       }
     });
   }, {
