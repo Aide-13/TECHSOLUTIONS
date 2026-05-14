@@ -51,7 +51,7 @@ git clone https://github.com/Aide-13/TECHSOLUTIONS.git
 
 1. Abre **DBeaver** y crea una nueva conexión MySQL.
 2. Importa el archivo `.sql` para generar las tablas y datos iniciales.
-3. Actualiza las credenciales de conexión en el archivo de configuración (por ejemplo `config.php`):
+3. Actualiza las credenciales de conexión en el archivo de configuración `conexion.php`:
 
 ```php
 $host = 'localhost';
@@ -78,11 +78,11 @@ http://localhost:3000
 La BD almacena la información dinámica del sitio:
 
 | Tabla | Contenido |
-| ----------- | ------------------------------------------------------------------------- |
+|-------|-----------|
 | `productos` | Nombre, descripción, precio, imagen y categoría de cada producto/licencia |
 | `blog` | Artículos del blog con título, contenido, imagen y fecha |
-| `noticias` | Novedades y eventos del sector tecnológico |
-| `servicios` | Servicios disponibles con características e imagen |
+| `galería` | Servicios en los que ha trabajado la empresa |
+| `servicios`| Servicios disponibles con características e imagen |
 
 ---
 
@@ -95,8 +95,8 @@ La tienda muestra productos y licencias de software con sus características y p
 ## 📌 Notas
 
 - Este proyecto fue desarrollado como caso de estudio para la materia de **Modelo Vista Controlador (MVC)**.
-- Se aplicó el patrón MVC para separar la lógica de negocio, la presentación y el acceso a datos.
-- El objetivo principal fue practicar el desarrollo frontend y backend integrado con una arquitectura ordenada.
+- El objetivo principal fue practicar el desarrollo frontend y backend para mostrar conocimientos previos a la materia.
+- Los datos mostrados son solamente demostrativos.
 
 ---
 
