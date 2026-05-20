@@ -461,10 +461,6 @@
     box-sizing: border-box;
 }
 
-
-/* =========================
-   MODAL PRODUCTOS
-========================= */
 .ver_mas{
     display: none;
     position: fixed;
@@ -519,8 +515,6 @@
     margin-top: 10px;
 }
 
-
-/* botones modal */
 .detalles .acciones{
     display: flex;
     justify-content: center;
@@ -545,10 +539,6 @@
     cursor: pointer;
 }
 
-
-/* =========================
-   TABLET
-========================= */
 @media screen and (max-width: 768px){
 
     .categorias_catalogo{
@@ -582,10 +572,6 @@
     }
 }
 
-
-/* =========================
-   CELULARES PEQUEÑOS
-========================= */
 @media screen and (max-width: 480px){
 
     .categorias_catalogo{
@@ -612,7 +598,7 @@
         font-size: 20px;
     }
 
-    .btn-carrito img{
+    .agregar-carrito img{
         max-width: 20px;
     }
 
@@ -622,6 +608,16 @@
 
     .catidad input{
         max-width: 350px;
+    }
+
+    .modal-carrito{
+        margin: 60px 40px;
+        max-width: 350px;
+    }
+
+    .contenido-carrito{
+        width: 80%;
+        margin: 0;
     }
 }
 

@@ -28,6 +28,7 @@ if (isset($_POST['articulo_id'])) {
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $articulo['titulo'] ?> - TechSolutions Blog</title>
         <link rel="stylesheet" href="../assets/css/Barra.css?v=<?php echo time(); ?>">
         <link rel="stylesheet" href="../assets/css/Articulo.css?v=<?php echo time(); ?>">
